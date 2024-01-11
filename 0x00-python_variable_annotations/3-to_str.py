@@ -3,4 +3,5 @@
 
 
 def to_str(n: float) -> str:
+    """Defines string"""
     return str(n)
