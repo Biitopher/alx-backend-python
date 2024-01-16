@@ -2,11 +2,11 @@
 """coroutine collectrandom numbers using async and return random numbers"""
 
 
+import asyncio
 from typing import List
 async_generator = __import__('0-async_generator').async_generator
 
 
 async def async_comprehension() -> List[float]:
     """coroutine random numbers"""
-    random_numbers = [_ async for _ in async_generator()]
-    return random_numbers
+    return ([x async for x in async_generator()])
