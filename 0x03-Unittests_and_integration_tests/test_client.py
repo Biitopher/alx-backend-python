@@ -83,5 +83,5 @@ class TestIntegrationGithubOrgClient(unittest.TestCase):
 
     def test_public_repos_with_license(self):
         """Create an instance of GithubOrgClient"""
-        github_org_client = GithubOrgClient("holberton")
+        github_org_client = GithubOrgClient("Test_value")
         assert True
