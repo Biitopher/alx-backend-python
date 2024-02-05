@@ -60,6 +60,7 @@ class TestGithubOrgClient(unittest.TestCase):
         result = test_client.has_license(repo, license_key)
         self.assertEqual(return_value, result)
 
+
 @parameterized_class(("org_payload", "repos_payload", "expected_repos",
                      "apache2_repos"), TEST_PAYLOAD)
 class TestIntegrationGithubOrgClient(unittest.TestCase):
@@ -76,12 +77,12 @@ class TestIntegrationGithubOrgClient(unittest.TestCase):
         """Stop the patcher"""
         cls.get_patcher.stop()
 
-    def test_public_repos_integration(self):
+    def test_public_repos(self):
         """Create an instance of GithubOrgClient"""
         result = GithubOrgClient("Test_value")
         self.assertTrue(result)
 
     def test_public_repos_with_license(self):
         """Create an instance of GithubOrgClient"""
-        github_org_client = GithubOrgClient("Test_value")
-        assert True
+        result = GithubOrgClient("Test_value")
+        self.assertTrue(result)
